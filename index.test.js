@@ -1,17 +1,27 @@
 const request = require('supertest');
 const app = require('./index');
+
 test('GET / returns a welcome message', async () => {
-const response = await request(app).get('/');
-expect(response.status).toBe(200);
-expect(response.body.message).toBe('Hello from CI/CD Lab - v2');
+  const response = await request(app).get('/');
+  expect(response.status).toBe(200);
+  expect(response.body.message).toBe('Hello from CI/CD Lab - v2');
 });
+
 test('GET /health returns healthy status', async () => {
-const response = await request(app).get('/health');
-expect(response.status).toBe(200);
-expect(response.body.status).toBe('healthy');
+  const response = await request(app).get('/health');
+  expect(response.status).toBe(200);
+  expect(response.body.status).toBe('healthy');
 });
+
 test('GET /add/3/4 returns 7', async () => {
-const response = await request(app).get('/add/3/4');
-expect(response.status).toBe(200);
-expect(response.body.result).toBe(7);
+  const response = await request(app).get('/add/3/4');
+  expect(response.status).toBe(200);
+  expect(response.body.result).toBe(7);
+});
+
+// Test for GET /goodbye route
+test('GET /goodbye returns goodbye message', async () => {
+  const response = await request(app).get('/goodbye');
+  expect(response.status).toBe(200);
+  expect(response.body.message).toBe('Goodbye! See you next time.');
 });
