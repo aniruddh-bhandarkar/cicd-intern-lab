@@ -1,0 +1,29 @@
+{
+  "name": "cicd-intern-lab",
+  "version": "1.0.0",
+  "description": "Lab8 CSE 3231",
+  "main": "index.js",
+  "scripts": {
+  "start": "node index.js",
+  "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniruddh-bhandarkar/cicd-intern-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aniruddh-bhandarkar/cicd-intern-lab/issues"
+  },
+  "homepage": "https://github.com/aniruddh-bhandarkar/cicd-intern-lab#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },  
+  "devDependencies": {
+  "jest": "^29.7.0",
+  "supertest": "^6.3.3"
+  }
+
+}
